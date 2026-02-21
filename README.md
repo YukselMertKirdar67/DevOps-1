@@ -117,3 +117,23 @@ Uses JOIN queries and JPA relationships.
 - Maven build lifecycle management
 - AWS EC2 deployment
 - Nginx reverse proxy configuration
+
+
+
+## 📷 Deployment Proof
+
+### 🌍 Application Running on AWS EC2
+
+![EC2 Live](docs/ec2-live.png)
+
+---
+
+### 🖥️ Spring Boot Running on EC2
+
+![EC2 Terminal](docs/ec2-terminal.png)
+
+---
+
+### 🔁 Nginx Reverse Proxy Configuration
+
+![Nginx Config](docs/nginx-config.png)
