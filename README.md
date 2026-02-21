@@ -6,6 +6,9 @@ This project is a full-stack web application built using **Java 25, Spring Boot 
 
 It simulates a **Library Management System** where users can manage members, books, and borrowing operations.
 
+Deployed on AWS EC2 with Nginx reverse proxy configuration.
+
+
 The system supports both:
 - Web-based interface (Thymeleaf)
 - REST API endpoints (for Postman testing)
@@ -52,34 +55,35 @@ API Layer: REST Controllers (JSON responses)
 
 ## ☁️ Deployment Architecture (AWS EC2 + Nginx)
 
-This application is packaged as a JAR file using Maven and deployed to an AWS EC2 instance.
+The application is built using Maven and packaged as a runnable JAR file.
+It is deployed to an AWS EC2 Linux instance and served publicly using Nginx as a reverse proxy.
 
 ### 🔨 Build
 
 mvn clean package
 
-This generates a .jar file inside the `target/` directory.
+This generates the executable JAR file in the `target/` directory.
 
 ### 🚀 Deployment Steps
 
-1. Upload the JAR file to AWS EC2 via SFTP.
+1. Transfer the JAR file to the EC2 instance via SFTP.
 2. Connect to EC2 using SSH.
 3. Run the application:
 
 java -jar app.jar
 
-The application runs on port 8080 inside EC2.
+The Spring Boot application runs internally on port 8080.
 
-### 🌍 Reverse Proxy (Nginx)
+### 🌍 Reverse Proxy Configuration
 
-Nginx is configured on EC2 as a reverse proxy:
+Nginx forwards public HTTP traffic to the Spring Boot application:
 
-Public IP (Port 80) → Nginx → Spring Boot (Port 8080)
+Internet → EC2 Public IP (Port 80)
+Nginx → localhost:8080 (Spring Boot)
 
-Users can access the application using:
+Users access the system via:
 
 http://<EC2_PUBLIC_IP>
-
 
 ## 🧪 How to Run
 
@@ -103,11 +107,13 @@ Relational structure includes:
 
 Uses JOIN queries and JPA relationships.
 
-🧠 Learning Outcomes
+## 🧠 Learning Outcomes
 
-Spring Boot layered architecture
-RESTful API design
-Thymeleaf server-side rendering
-JPA entity relationships
-SQL JOIN operations
-Maven build lifecycle
+- Spring Boot layered architecture
+- RESTful API design principles
+- Thymeleaf server-side rendering
+- JPA entity relationships and mappings
+- SQL JOIN operations
+- Maven build lifecycle management
+- AWS EC2 deployment
+- Nginx reverse proxy configuration
