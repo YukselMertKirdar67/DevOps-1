@@ -43,17 +43,7 @@ The system supports both:
 
 ## 🏗️ Architecture
 
-Client (Browser / Postman)
-        ↓
-Controller
-        ↓
-DTO Layer
-        ↓
-Service
-        ↓
-Repository (JPA)
-        ↓
-MySQL Database
+Client (Browser / Postman) -> Controller -> DTO Layer -> Service -> Repository (JPA) -> MySQL Database
 
 Web Layer: Thymeleaf (Server-side rendering)
 API Layer: REST Controllers (JSON responses)
