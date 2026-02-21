@@ -85,7 +85,7 @@ Users access the system via:
 
 http://<EC2_PUBLIC_IP>
 
-## 🧪 How to Run
+## 🧪 How to Run (Local Development)
 
 1️⃣ Configure MySQL in `application.properties`
 
