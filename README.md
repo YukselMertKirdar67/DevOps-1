@@ -58,6 +58,8 @@ MySQL Database
 Web Layer: Thymeleaf (Server-side rendering)
 API Layer: REST Controllers (JSON responses)
 
+
+
 ## ☁️ Deployment Architecture (AWS EC2 + Nginx)
 
 This application is packaged as a JAR file using Maven and deployed to an AWS EC2 instance.
