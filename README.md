@@ -67,12 +67,14 @@ API Layer: REST Controllers (JSON responses)
 
 ```bash
 mvn clean install
+```bash
 
 
 3️⃣ Run:
 
 ```bash
 mvn spring-boot:run
+```bash
 
 Application runs at: http://localhost:8080
 
