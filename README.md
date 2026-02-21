@@ -64,17 +64,10 @@ API Layer: REST Controllers (JSON responses)
 1️⃣ Configure MySQL in `application.properties`
 
 2️⃣ Build project:
-
-```bash
 mvn clean install
-```bash
-
 
 3️⃣ Run:
-
-```bash
 mvn spring-boot:run
-```bash
 
 Application runs at: http://localhost:8080
 
@@ -82,10 +75,17 @@ Application runs at: http://localhost:8080
 
 Relational structure includes:
 
-Member
-
-Book
-
-Borrow (Join entity)
+-Member
+-Book
+-Borrow (Join entity)
 
 Uses JOIN queries and JPA relationships.
+
+🧠 Learning Outcomes
+
+Spring Boot layered architecture
+RESTful API design
+Thymeleaf server-side rendering
+JPA entity relationships
+SQL JOIN operations
+Maven build lifecycle
